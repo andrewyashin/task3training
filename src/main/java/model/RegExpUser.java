@@ -3,7 +3,7 @@ package model;
 /**
  * Created by andrew_yashin on 4/20/17.
  */
-public interface RegExUser {
+public interface RegExpUser {
     String
             NAME_REG = "[A-Z]{1}[a-z]{1,20}",
             SURNAME_REG = "[A-Z]{1}[a-z]{1,20}",
@@ -17,7 +17,7 @@ public interface RegExUser {
             MOBILEPHONE_REG2 = "(\\(?([0-9]{3})\\)?([ .-]?)([0-9]{3})\\2([0-9]{4}))?",
 
             EMAIL_REG = "\\w+@[A-Za-z0-9]+\\.[A-Za-z]{2,64}",
-            SKYPE_REG = "\\w+",
+            SKYPE_REG = "[A-Za-z]{1}[A-Za-z\\_\\.0-9]+",
 
             INDEX_REG = "[0-9]{5}",
             CITY_REG = "[A-Z]{1}[A-Za-z]+",
@@ -25,5 +25,4 @@ public interface RegExUser {
             NUMBERHOME_REG = "\\d+",
             STREETNUMBER_REG = "\\d+",
             FLAT_NUMBER_REG = "\\d+";
-
 }

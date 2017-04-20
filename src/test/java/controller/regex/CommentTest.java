@@ -3,7 +3,7 @@ package controller.regex;
 import static org.junit.Assert.*;
 
 import model.Examples;
-import model.RegExUser;
+import model.RegExpUser;
 import org.junit.Test;
 
 /**
@@ -12,11 +12,11 @@ import org.junit.Test;
 public class CommentTest extends RegExTest {
     @Test
     public void checkCommentWithExample(){
-        assertTrue(check(Examples.COMMENT, RegExUser.COMMENT_REG));
+        assertTrue(check(Examples.COMMENT, RegExpUser.COMMENT_REG));
     }
 
     @Test
     public void checkEmptyComment(){
-        assertTrue(check("", RegExUser.COMMENT_REG));
+        assertTrue(check("", RegExpUser.COMMENT_REG));
     }
 }

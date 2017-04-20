@@ -1,6 +1,6 @@
 package controller.regex;
 
-import model.RegExUser;
+import model.RegExpUser;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,11 +10,11 @@ import static org.junit.Assert.*;
 public class MobilePhone2Test extends RegExTest {
     @Test
     public void checkSecondPhoneNumberForEmpty(){
-        assertTrue(check("", RegExUser.MOBILEPHONE_REG2));
+        assertTrue(check("", RegExpUser.MOBILEPHONE_REG2));
     }
 
     @Test
     public void checkMobilePhoneNumberWithoutSpaces(){
-        assertTrue(check("0663533848", RegExUser.MOBILEPHONE_REG));
+        assertTrue(check("0663533848", RegExpUser.MOBILEPHONE_REG));
     }
 }

@@ -3,7 +3,7 @@ package controller.regex;
 import static org.junit.Assert.*;
 
 import model.Examples;
-import model.RegExUser;
+import model.RegExpUser;
 import org.junit.Test;
 
 /**
@@ -12,31 +12,31 @@ import org.junit.Test;
 public class HomePhoneTest extends RegExTest {
     @Test
     public void checkHomePhoneNumberWithExample(){
-        assertTrue(check(Examples.HOMEPHONE, RegExUser.HOMEPHONE_REG));
+        assertTrue(check(Examples.HOMEPHONE, RegExpUser.HOMEPHONE_REG));
     }
 
     @Test
     public void checkHomePhoneNumberWithDifferentSymbols(){
-        assertFalse(check("!@#$", RegExUser.HOMEPHONE_REG));
+        assertFalse(check("!@#$", RegExpUser.HOMEPHONE_REG));
     }
 
     @Test
     public void checkHomePhoneNumberWithCharacters(){
-        assertFalse(check("asdasd", RegExUser.HOMEPHONE_REG));
+        assertFalse(check("asdasd", RegExpUser.HOMEPHONE_REG));
     }
 
     @Test
     public void checkHomePhoneNumberWithoutSpaces(){
-        assertFalse(check("2344545", RegExUser.HOMEPHONE_REG));
+        assertFalse(check("2344545", RegExpUser.HOMEPHONE_REG));
     }
 
     @Test
     public void checkHomePhoneNumberForFiveNumbers(){
-        assertFalse(check("123 34", RegExUser.HOMEPHONE_REG));
+        assertFalse(check("123 34", RegExpUser.HOMEPHONE_REG));
     }
 
     @Test
     public void checkHomePhoneNumberForTenNumbers(){
-        assertFalse(check("213 23 23 2", RegExUser.HOMEPHONE_REG));
+        assertFalse(check("213 23 23 2", RegExpUser.HOMEPHONE_REG));
     }
 }

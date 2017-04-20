@@ -1,7 +1,7 @@
 package controller.regex;
 
 import model.Examples;
-import model.RegExUser;
+import model.RegExpUser;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -11,27 +11,27 @@ import static org.junit.Assert.*;
 public class NickNameTest extends RegExTest {
     @Test
     public void checkNickNameWithExample(){
-        assertTrue(check(Examples.NICKNAME, RegExUser.NICKNAME_REG));
+        assertTrue(check(Examples.NICKNAME, RegExpUser.NICKNAME_REG));
     }
 
     @Test
     public void checkNickNameWithNumberAtStart(){
-        assertFalse(check("1sadad", RegExUser.NICKNAME_REG));
+        assertFalse(check("1sadad", RegExpUser.NICKNAME_REG));
     }
 
     @Test
     public void checkRightNickName(){
-        assertTrue(check("razor999", RegExUser.NICKNAME_REG));
+        assertTrue(check("razor999", RegExpUser.NICKNAME_REG));
     }
 
     @Test
     public void checkNickNameWithDifferentSymbols(){
-        assertFalse(check("raz!@#99", RegExUser.NICKNAME_REG));
+        assertFalse(check("raz!@#99", RegExpUser.NICKNAME_REG));
     }
 
     @Test
     public void checkNickNameWithDot(){
-        assertTrue(check("andrew.yashin", RegExUser.NICKNAME_REG));
+        assertTrue(check("andrew.yashin", RegExpUser.NICKNAME_REG));
     }
 
 }

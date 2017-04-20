@@ -17,9 +17,7 @@ public abstract class RegExTest {
     public static void initController(){
         Model model = mock(Model.class);
         View view = mock(View.class);
-
         controller = new Controller(view, model);
-        System.out.println("Controller created");
     }
 
     public boolean check(String input, String pattern){
