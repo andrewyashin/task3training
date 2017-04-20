@@ -5,11 +5,12 @@ package model;
  */
 public interface RegExUser {
     String
-            NAME_REG = "[A-Z]{1}[A-Za-z]{1,20}",
-            SURNAME_REG = "[A-Z]{1}[A-Za-z]{1,20}",
-            FATHERNAME_REG = "[A-Z]{1}[A-Za-z]{1,20}",
+            NAME_REG = "[A-Z]{1}[a-z]{1,20}",
+            SURNAME_REG = "[A-Z]{1}[a-z]{1,20}",
+            FATHERNAME_REG = "[A-Z]{1}[a-z]{1,20}",
             NICKNAME_REG = "^[A-Za-z][A-Za-z0-9_.]{1,20}",
             COMMENT_REG = ".*",
+            GROUP_REG = "[0-3]",
 
             HOMEPHONE_REG = "[0-9]{3}\\s[0-9]{2}\\s[0-9]{2}",
             MOBILEPHONE_REG = "\\(?([0-9]{3})\\)?([ .-]?)([0-9]{3})\\2([0-9]{4})",

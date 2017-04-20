@@ -1,8 +1,6 @@
 package model;
 
-/**
- * Created by andrew_yashin on 4/20/17.
- */
+
 public interface Examples {
     String
             NAME = "Andrew",

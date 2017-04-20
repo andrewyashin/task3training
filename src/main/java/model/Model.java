@@ -5,9 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Created by andrew_yashin on 4/20/17.
- */
 @Data
 @NoArgsConstructor
 public class Model {
@@ -25,9 +22,10 @@ public class Model {
         return group.name();
     }
 
-    public void setGroup(int number){
-        group = Groups.TM41;
+    public void setGroup(Groups group){
+        this.group = group;
     }
+
     public String getSurnameAndName(){
         StringBuilder builder = new StringBuilder();
         builder.append(surname);
