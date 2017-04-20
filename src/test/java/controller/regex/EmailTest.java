@@ -29,7 +29,7 @@ public class EmailTest extends RegExTest {
 
     @Test
     public void checkEmailStartsWithNumbers(){
-        assertFalse(check("123andy97@ukr.net", RegExpUser.EMAIL_REG));
+        assertTrue(check("123andy97@ukr.net", RegExpUser.EMAIL_REG));
     }
 
     @Test
