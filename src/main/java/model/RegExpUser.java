@@ -23,6 +23,6 @@ public interface RegExpUser {
             CITY_REG = "[A-Z]{1}[A-Za-z]+",
             STREET_REG = "[A-Z]{1}[A-Za-z]+",
             NUMBERHOME_REG = "\\d+",
-            STREETNUMBER_REG = "\\d+",
+            STREETNUMBER_REG = "\\d+[A-Z]",
             FLAT_NUMBER_REG = "\\d+";
 }

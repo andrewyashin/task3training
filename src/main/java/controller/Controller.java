@@ -58,7 +58,7 @@ public class Controller {
             model.setDateOfCreating(generateCreatingDate());
         }
 
-        model.setDateOfModify(geneateModifyDate());
+        model.setDateOfModify(generateModifyDate());
         view.printReport(createReport());
     }
 
@@ -114,7 +114,7 @@ public class Controller {
         return new Date().toString();
     }
 
-    public String geneateModifyDate(){
+    public String generateModifyDate(){
         return new Date().toString();
     }
 }
