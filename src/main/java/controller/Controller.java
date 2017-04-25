@@ -1,9 +1,7 @@
 package controller;
 
-import model.Examples;
-import model.Groups;
-import model.Model;
-import model.RegExpUser;
+import exceptions.NickNameContainsException;
+import model.*;
 import view.View;
 
 import java.io.InputStream;
@@ -59,6 +57,7 @@ public class Controller {
         }
 
         model.setDateOfModify(generateModifyDate());
+        putDataToDB();
         view.printReport(createReport());
     }
 
@@ -108,6 +107,22 @@ public class Controller {
         report.put(View.DATE_OF_CREATING, model.getDateOfCreating());
         report.put(View.DATE_OF_MODIFY, model.getDateOfModify());
         return report;
+    }
+
+    public void putDataToDB(){
+        ManagingUsersDB usersDB = new ManagingUsersDB();
+        boolean putted = false;
+
+        while (!putted) {
+            try {
+                usersDB.putUserToDB(model);
+                putted = true;
+            } catch (NickNameContainsException e) {
+                System.out.println(e.getMessage());
+                model.setNickName(
+                        inputField(View.NICKNAME, Examples.NICKNAME, RegExpUser.NICKNAME_REG, System.in));
+            }
+        }
     }
 
     public String generateCreatingDate(){
